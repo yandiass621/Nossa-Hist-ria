@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nossa História</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="main">
+
+    <div class="apresentacao">
+        <h4>CRIAR PÁGINA</h4>
+        <h1>Construa sua página dedicatória</h1>
+        <h4 class="text-white">Preencha cada etapa para personalizar antes de publicar</h4>
+    </div>
+
+    <div class="container">
+
+        <!-- FORMULÁRIO -->
+        <div class="card">
+
+            <div class="field">
+                <h3>TÍTULO</h3>
+                <input id="titleInput" type="text" placeholder="Ex: Nossa História">
+            </div>
+
+            <div class="field">
+                <h3>MENSAGEM</h3>
+                <input id="messageInput" type="text" placeholder="Mensagem especial">
+            </div>
+
+            <div class="field">
+                <h3>DATA</h3>
+                <input id="dateInput" type="date">
+            </div>
+
+            <!-- UPLOAD -->
+            <div class="upload-area field">
+                <h3>FOTOS (até 8)</h3>
+
+                <label for="imageInput" class="upload-box">
+                    📷 Clique para adicionar fotos
+                </label>
+
+                <input id="imageInput" type="file" accept="image/*" multiple hidden>
+
+                <div class="thumbs" id="thumbs"></div>
+
+                <p class="image-counter">
+                    <span id="imageCount">0</span> / 8 imagens
+                </p>
+            </div>
+
+            <!-- YOUTUBE -->
+            <div class="field">
+                <h3>MÚSICA (YouTube)</h3>
+                <input
+                    id="musicInput"
+                    type="text"
+                    placeholder="Cole o link do YouTube aqui"
+                >
+            </div>
+
+            <div class="field">
+                <h3>EMOJI</h3>
+                <input id="emojiInput" type="text" placeholder="💖">
+            </div>
+
+            <div class="field">
+                <h3>E-MAIL</h3>
+                <input type="email" placeholder="email@gmail.com">
+            </div>
+
+            <div class="buttons">
+                <button class="back">Voltar</button>
+                <button class="finalizar">Finalizar & Gerar</button>
+            </div>
+
+        </div>
+
+        <!-- PREVIEW -->
+        <div class="preview-area">
+            <h3>Pré-visualização</h3>
+
+            <div class="phone">
+                <div class="emoji-container" id="emojiContainer"></div>
+
+                <div class="preview-page">
+                    <h1 id="fsTitle">Nossa História</h1>
+
+                    <div class="date-badge" id="fsDate"></div>
+
+                    <div class="fs-images" id="fsImages"></div>
+
+                    <p id="fsMessage" class="preview-message">
+                        Sua mensagem aparecerá aqui
+                    </p>
+                    <span id="fsDate"></span>
+
+                    <div class="carousel-wrapper">
+                        <button class="nav-btn left" id="prevBtn">‹</button>
+                        <div class="fs-images" id="fsImages"></div>
+                        <button class="nav-btn right" id="nextBtn">›</button>
+                    </div>
+
+                    <!-- YOUTUBE EMBED -->
+                    <div class="youtube-wrapper">
+                        <iframe
+                            id="ytPlayer"
+                            src=""
+                            frameborder="0"
+                            allow="autoplay"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+<div id="customAlert" class="alert-overlay">
+    <div class="alert-box">
+        <p id="alertText"></p>
+        <button onclick="closeAlert()">Entendi</button>
+    </div>
+</div>
+</body>
+</html>
